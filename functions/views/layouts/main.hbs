@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Author: A.N. Bajang,
+    Illustrator: P. Picture, Category: CMS, Price: $17.99,
+    Length: 784 pages">
+    <meta name="google-site-verification" content="SuEsDDNieRFtNcn0_-b3pCJc2nhQ6DA35er_SReJZyg" />  
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <meta name="theme-color" content="#00897B"/>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            }
+    </style>
+</head>
+
+<script src="/db.js"></script>
+<body onload="">
+
+    <nav class="teal lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo" id="logo-container">Hai Tekno</a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+            <ul class="topnav right hide-on-med-and-down">
+                <li><a class="waves-effect" href="/">Home</a></li>
+            </ul>
+            <ul class="sidenav" id="nav-mobile">
+                <li><a class="waves-effect" href="/">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+<div id="slid" class="slid"></div>
+<div class="container" id="body-content" >
+        {{{body}}}
+    </div>
+   
+
+    <script src="/js/materialize.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/nav.js"></script>
+    <script>
+    
+        if("serviceWorker" in navigator){
+            window.addEventListener("load",function(){
+                navigator.serviceWorker
+                    .register("service-worker.js")
+                    .then(function(){
+                        console.log("sukses daftar service worker");
+                    })
+                    .catch(function(){
+                        console.log("pendaftaran service gagal");
+                    });
+            });
+        }else{
+            console.log("service worker belum didukung browser ini");
+        }
+    </script>
+</body>
+</html>

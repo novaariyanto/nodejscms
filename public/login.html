@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Dokter Soewondo</title>
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="css/materialize.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="db.js"></script>
+</head>
+<style>
+    html,
+body{
+    background: #26a69a ;
+}
+.login-box {
+  height: 100%;
+}
+</style>
+<body onload="ceklogin()">
+  <div class="progress" style="display: none;">
+        <div class="indeterminate"></div>
+    </div>
+        <div class="valign-wrapper row login-box" >
+                <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+                  <form method="post" enctype="multipart/form-data">
+                    <div class="card-content">
+                            <center>
+                                <img src="logo.png" alt="Icon" style="width:20vh;height: 20vh;">
+                            </center>
+                      <span class="card-title center">Login Dokter Soewondo</span>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <label for="email">Username / Email</label>
+                          <input type="text" class="validate" name="username" id="email" />
+                        </div>
+                        <div class="input-field col s12">
+                          <label for="password">Password </label>
+                          <input type="password" class="validate" name="password" id="password" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-action right-align">
+                        <a href="#" onclick="ceklogin()">Cek Login</a>
+                         <a href="#" onclick="deleten()">Delete</a>
+                      <button type="submit" class="btn green waves-effect waves-light" >Masuk</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <script src="js/materialize.js"></script>
+              <script src="js/materialize.min.js"></script>
+              <script src="js/nav.js"></script>
+             
+              <script>
+                  $("form").on("submit", function(event) {
+                    event.preventDefault();
+                    $('.progress').show();
+                    var url = 'http://onlines.rsud.patikab.go.id:8080/android/service/v1/login.php';
+                    var data = $(this).serialize();
+                    var header = {
+                        'token':'1',
+                        'device_token':'1',
+                        'package_name':'1'
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        headers : header,
+                        data: data,
+                        success: function(res){
+                            M.toast({html: res.message})
+                            if(res.message =="Login berhasil"){
+                                savelogin(res);
+                            }
+                            $('.progress').hide();
+                        },
+                        error:function(err){
+                            $('.progress').hide();
+                        }
+                        });
+            });
+
+</script>
+</body>
+</html>

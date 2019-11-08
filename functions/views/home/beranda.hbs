@@ -1,0 +1,20 @@
+
+<div class="row">
+    {{#each data}}   
+    <a href="/blog/{{slug}}" style=" color:inherit;text-decoration: none;">
+        <div class="col s12 m4">
+            <div class="card" style="padding:10px">
+                <div class="card-image">
+                <img style="height: 20vh;width:100%" src="{{thumb}}" alt="{{title}}">
+            
+                {{!-- <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a> --}}
+                <div style="padding-left: 5px;padding-right: 5px;padding-top: 5px;">
+                <span style="font-size: 13pt;text-transform:capitalize;font-weight:bold;">{{title}}</span>
+                </div>
+                </div>
+            
+            </div>
+            </div>
+        </a>
+    {{/each}}
+</div>
