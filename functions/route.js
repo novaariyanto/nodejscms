@@ -51,23 +51,39 @@ router.get('/',(req,res)=>{
 router.get('/blog/:slug',(req,res)=>{
     var slug = req.params.slug;
     var d;
-    userref.orderByChild('slug').equalTo(slug).once("value", function(snapshot) {
+    var field,key;
+    var uref = db.child(tb_article).limitToFirst(1); 
+    uref.orderByChild('slug').equalTo(slug).once("value", function(snapshot) {
        d = snapshot.val();
        var title = [] ;
-       var c,t;
+       var c,t,view;
        for(i in d){
            title = i;
            c = d[i].content;
            t = d[i].title;
            thumb = d[i].thumb;
+           view = d[i].views;
        }
+        key = Object.keys(d)[0];
+        view = parseInt(view);
+        view = view + 1;
+       
+      
+    //   res.send(d);
+    var userrf = db.child(tb_article).child(key);
+    
+    userrf.update({
+        "views":view
+        });
+       
 
     //    res.send(data.content);
        res.render('blog/detail',{
          title : t,
-         data     : c,
-         thumb :     thumb,
-         slide : false 
+         data  : c,
+         thumb : thumb,
+         slide : false ,
+         view  : view
         }) 
     });
  
