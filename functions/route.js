@@ -52,7 +52,7 @@ router.get('/blog/:slug',(req,res)=>{
     var slug = req.params.slug;
     var d;
     var field,key;
-    var uref = db.child(tb_article).limitToFirst(1); 
+    var uref = db.child(tb_article).limitToLast(1); 
     uref.orderByChild('slug').equalTo(slug).once("value", function(snapshot) {
        d = snapshot.val();
        var title = [] ;
@@ -71,12 +71,10 @@ router.get('/blog/:slug',(req,res)=>{
       
     //   res.send(d);
     var userrf = db.child(tb_article).child(key);
-    
     userrf.update({
         "views":view
         });
        
-
     //    res.send(data.content);
        res.render('blog/detail',{
          title : t,
@@ -84,10 +82,8 @@ router.get('/blog/:slug',(req,res)=>{
          thumb : thumb,
          slide : false ,
          view  : view
-        }) 
+        }); 
     });
- 
-   
 })
 router.get('/loadmore/:s',(req,res)=>{
     // var queryText = req.params.q
