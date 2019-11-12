@@ -89,6 +89,45 @@ router.get('/blog/:slug',(req,res)=>{
  
    
 })
+router.get('/loadmore/:s',(req,res)=>{
+    // var queryText = req.params.q
+    var start = req.params.s
+    var startpage = parseInt(start);
+    var uref = db.child(tb_article);
+    uref.orderByChild('ongko').startAt(startpage).limitToFirst(5).once("value", function(snapshot) {
+       var d = snapshot.val();
+       var list = '<li></li>';
+       var a = "";
+      for(i in d){
+        //   a += '<li>'+d[i].title
+        //         +
+        //         +
+        //         '</li>';
+        a += '<li data-id="'+d[i].ongko+'">'+
+        '<a href="/blog/'+d[i].slug+'" style=" color:inherit;text-decoration: none;">'+
+            '<div class="col s12 m4">'+
+                '<div class="card" style="padding:10px">'+
+                    '<div class="card-image">'+
+                    '<img style="height: 20vh;width:100%" src="'+d[i].thumb+'" alt="'+d[i].title+'">'+
+                    '<div style="padding-left: 5px;padding-right: 5px;padding-top: 5px;">'+
+                    '<span style="font-size: 13pt;text-transform:capitalize;font-weight:bold;">'+d[i].title+'</span>'+
+                    '</div>'+
+                    '</div>'+
+                '</div>'+
+                '</div>'+
+             '</a>'+
+            '</li>';
+      }
+     
+       res.send(a);
+        // res.render('home/beranda',{
+        //     title:'SSCASN Informasi',
+        //     data : d,
+        //     slide : false ,
+        // }) 
+    });
+ 
+})
 router.get('/navigasi',(req,res)=>{
     res.sendFile(__dirname+'/views/layouts/navigasi.hbs');
 })

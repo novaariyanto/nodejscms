@@ -1,6 +1,8 @@
-
+ <script src="/js/jquery.min.js"></script>
 <div class="row">
+    <ul id="list">
     {{#each data}}   
+    <li data-id="{{ongko}}">
     <a href="/blog/{{slug}}" style=" color:inherit;text-decoration: none;">
         <div class="col s12 m4">
             <div class="card" style="padding:10px">
@@ -16,5 +18,51 @@
             </div>
             </div>
         </a>
+        </li>
     {{/each}}
+    </ul>
+     <center>
+        <button class="btn btn bt-load" onclick="loadmore()" style="display: block;">Load More</button>
+         <div class="preloader-wrapper small active preload"  style="display: none;">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+    </center>
 </div>
+<script>
+    function loadmore(){
+        var holder = $('[data-id]');
+        var las = $("li").last().attr("data-id");
+        var st = las - (holder.length + 5);
+         $('.bt-load').hide();
+        $('.preload').show();
+        if(st > 0){
+            $.ajax({
+                type:'GET',
+                url : '/loadmore/'+st,
+                success:function(data){
+                    console.log('sukses');
+                    $("#list").append(data);
+                    $('.preload').hide();
+                    $('.bt-load').show();
+                    
+                },
+                error:function(jqXHR, textStatus, errorThrown){
+                   $('.preload').hide();
+                   $('.bt-load').show();
+                }
+            })
+        }else{
+            alert('semua data telah tampil');
+             $('.preload').hide();
+             $('.bt-load').show();
+        }
+    }
+</script>
