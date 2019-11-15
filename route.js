@@ -21,6 +21,7 @@ admin.initializeApp({
 var db = admin.database().ref();
 var tb_user = 'users';
 var tb_article = 'article';
+var dess = "Author: A.N. Bajang,Illustrator: P. Picture, Category: CMS, Price: $17.99,Length: 784 pages";
 const userref = db.child(tb_article).limitToLast(9);
 router.post('/add',(req,res)=>{
     var title = req.body.title;
@@ -49,6 +50,7 @@ router.get('/',(req,res)=>{
         res.render('home/beranda',{
             title: namaapplikasi,
             data : d,
+            desc :dess,
             slide : false ,
             na : namaapplikasi
            }) 
@@ -115,6 +117,7 @@ router.get('/blog/:slug',(req,res)=>{
        res.render('blog/detail',{
          title : t,
          data  : c,
+         desc : c,
          thumb : thumb,
          slide : false ,
          view  : view,
