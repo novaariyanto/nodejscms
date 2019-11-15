@@ -3,6 +3,11 @@ const admin = require('firebase-admin');
 
 var builder = require('xmlbuilder');
 var fs     = require('fs');
+
+var formidable = require('formidable');
+var mv = require('mv');
+var builder = require('xmlbuilder');
+
 var dirPath = __dirname + "/../public/xmlfiles/booksxml.xml";
 var cfg = require(__dirname+'/public/manifest.json');
 var namaapplikasi = cfg.name;
@@ -49,6 +54,35 @@ router.get('/',(req,res)=>{
            }) 
     });
    
+});
+router.post('/upload',(req,res)=>{
+ 
+    var form = new formidable.IncomingForm();
+        
+  
+    // manangani upload file
+    form.parse(req, function (err, fields, files) {
+      var oldpath = files.filetoupload.path;
+      var newpath = __dirname + "/uploads/" + files.filetoupload.name;
+
+      // pindahakan file yang telah di-upload
+      mv(oldpath, newpath, function (err) {
+        if (err) { throw err; }
+        console.log('file uploaded successfully');
+        return res.end("file uploaded successfully");
+      });
+    });
+});
+router.get('/upload',(req,res)=>{
+        
+    // kirim form upload
+    
+        res.render('page/upload',{
+            title: namaapplikasi,
+            slide : false ,
+            na : namaapplikasi
+           }) 
+      
 });
 router.get('/blog/:slug',(req,res)=>{
     var slug = req.params.slug;
@@ -156,37 +190,24 @@ router.get('/rajal',(req,res)=>{
         baseurl : siteurl
     });
 });
-router.get('/getfile',(req,res)=>{
-    
-    res.send(cfg);
-})
+
 router.get('/sitemap',(req,res)=>{
-    var xml = builder.create('bookstore');
-     
-    var result = req.models.book.find({
-     }, function(error, books){
+    var ureff = db.child(tb_article);
+    ureff.once("value", function(snapshot) {
+        var d = snapshot.val();
+        // res.send(d);
+          var root = builder.create('urlset');
+        for(i in d){
+            var item = root.ele('url');
+            item.ele('loc','http://blog.cahkulutan.xyz/blog/'+d[i].slug);
+            item.ele('changefreq','daily');
+        }
+      var xml = root.end({pretty:true});
+        res.end(xml);
+    
+    });
+
    
-       if(error) throw error;
-           for(var i=0; i< books.length; i++){
-               xml.ele('book')
-               .ele('name', {'lang': books[i]['language']}, books[i]['name']).up()
-               .ele('price', books[i]['price']).up()
-               .ele('category', books[i]['category']).up()
-               .ele('author', books[i]['author']).up()
-               .ele('ISBN', books[i]['ISBN']).up()
-               .ele('publish_date', books[i]['publish_date']).end();
-           }
-            
-           var xmldoc = xml.toString({ pretty: true }); 
-          
-           fs.writeFile(dirPath, xmldoc, function(err) {
-               if(err) { return console.log(err); } 
-               console.log("The file was saved!");
-               res.render('index', { title: 'Generate XML using NodeJS' });
-         
-             }); 
-        
-        });
 })
 function ToSeoUrl(url) {
         
