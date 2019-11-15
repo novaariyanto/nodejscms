@@ -1,0 +1,30 @@
+{
+    "name": "Bajang CMS",
+    "short_name": "Bajang CMS",
+    "description": "Bajang CMS",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#00897B",
+    "theme_color": "#00897B",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "firebasekey":[{
+        "type": "service_account",
+        "project_id": "lapapa",
+        "private_key_id": "20781c29c6c476e0403e0b91211fb2d2ebc22e0e",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCweyD3+owZ5+YD\n3RndZQVigKZRaE3VGosi9iIM7SXCnz6rZHYyEnKb6Cv2j9vdFPim2KkAxlAxFcIw\nN5tnsbv4cbd+WTLxoS/rgFxMubCW6PvLvVGicZYsOmxZtzactv9Yma5KPQ+8dZcV\nFUgTfxgpH3P5ptdPtyGa9zbAnlBUrJJRIYjUsH2nkZqydUEEvnaRzhVT2vUkLwCj\nk0zj9uFwFDMWF1KemZoBcHfZteDs3mhGh6SNHKBsytlRbL3szYzhXJwH40Ijarrq\nSqJrE8yZ+itnrkc54gJ/Wew4tk1Yls/gkUBfBYUzQrKT2LDFKTYqzQfUANmHPLln\nW3m/a5ABAgMBAAECggEAAsaAQEPnTKBO0vBi5xcWIy3HP0QEJQ+jN33HgiKrysPt\nmFg5Ls3a+8RaO0N+vToPYECfZmdW5sDr6ks92xLkllLsmlZixwY6xt5IOKBmIeUE\ncPzh3VRxjkFD/cfTCuf1s/5qT5YFfRdIU6E1iFBokwjZJZ6JSgfizowD+gnHvxRM\nJSVJkCM8y4D5ne4/f8amwlCb70Hvsj1mAcMAnil5VLvdIZC11E9mRt28WWK+TU4o\ndxlLSJLNe8J3gLxAKwv7aARS3qZ+sMyyJWYF8xj7gQ8oe+IiK5OaPZFxn9hrCLts\nWqV+DA0ff0p70qqcf0bA6fDa0a10J1LU4lXsEN+k5QKBgQDrdpw41TfCqd2Xigui\nZkR3NqV51iHHHAcFRoDCWz4MgZv3YaUmKmiS0OZNeVXsLrHFlXMsnDbrR9BtC6jk\n9etgyDpvehh+R7CAZN7wI+14vwQIYoVIHHs49RqbLxA/roXnGnuAqTUbA6HJVvyp\nnawpzlqE1Vdfq6/+WC3XnCDd8wKBgQC/35HJeQ8QN6JY0q0MTiryS1MdFCpyVBQn\nDFhCqItBNdhS0W018Fg64c6QUBqfZb8CQaPn/vCNzXtSQM6hEE0qU1KjLWV3rSYp\nUPggsaNu2bnxpk2mbXJceTRJ0pc25K7NG8pbyus9wlxYcWacujsPFWgSFAy1oNcV\nXsUOtRszOwKBgDedCSLnQUdKBZuAMGVIEE2z63uOVuYHOaVGVK0TDeG4TxUry+zq\nwU5D5tFPojqpgLVxKgXUU6hYiuLmiRqi9tgiEqM3zEcvOYHp0ToY0kLdot80HdS9\nXWFDiugyQn04BEpkV904meFqhzDdyclqAzrQkVKkbQGctHG3dARjzON/AoGAKkyv\nZys5Fuos8EgBvmS9Mw1IFXEMqoe+qZ0fGBLwIEAuoJNq8Ck8Sj7duxLty5Yytdyi\ntdKOVbSnK0r+QqPFXz9fSHoJlIinkRQ4n3yJ+zYkuBFhrP8T5y8RR/UVQRTJNI6b\n3gCuO79NfHIDnSmxO3IMr2+cHa6HvD5YUxW6GWECgYEAyPqT13gXpFDrPnV+p31P\nqwloCzBuz6B8XnFuroD1py/r3HxSHE37B8zJMbJFsQrae+Q8hsaIey21f0+bzq3L\ncI30MJUN+Q6EHa4fC8AEE7f5R3pyNPA0QCXuEMcE7AIqcgxYSdidkoPy2kOPFmCY\njZoqY3TKzmR4vflFk9xRlic=\n-----END PRIVATE KEY-----\n",
+        "client_email": "firebase-adminsdk-xh454@lapapa.iam.gserviceaccount.com",
+        "client_id": "102378720279228181945",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-xh454%40lapapa.iam.gserviceaccount.com"
+      }],
+      "databaseurl":"https://lapapa.firebaseio.com"
+      
+}
