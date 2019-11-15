@@ -196,7 +196,8 @@ router.get('/sitemap',(req,res)=>{
     ureff.once("value", function(snapshot) {
         var d = snapshot.val();
         // res.send(d);
-          var root = builder.create('urlset');
+          var root = builder.create('urlset').att({'xmlns':'http://www.sitemaps.org/schemas/sitemap/0.9'});
+
         for(i in d){
             var item = root.ele('url');
             item.ele('loc','http://blog.cahkulutan.xyz/blog/'+d[i].slug);
