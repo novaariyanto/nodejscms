@@ -28,4 +28,7 @@ app.set('view engine','hbs');
 app.use('/assets',express.static(__dirname+'/public'));
 app.use('/',require(__dirname+'/route'));
 
-exports.app = functions.https.onRequest(app);
+var port = 8000;
+app.listen(port,()=>{
+    console.log('Server is running at port '+port);
+});

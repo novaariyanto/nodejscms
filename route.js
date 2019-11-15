@@ -4,12 +4,13 @@ const admin = require('firebase-admin');
 var builder = require('xmlbuilder');
 var fs     = require('fs');
 var dirPath = __dirname + "/../public/xmlfiles/booksxml.xml";
-
-
-var serviceAccount = require(__dirname+'/firebasekey.json');
+var cfg = require(__dirname+'/public/manifest.json');
+var namaapplikasi = cfg.name;
+var fkey = cfg.firebasekey[0];
+var dburl = cfg.databaseurl;
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://dokterapp-6804c.firebaseio.com"
+    credential: admin.credential.cert(fkey),
+    databaseURL: dburl
   });
 
 var db = admin.database().ref();
@@ -41,9 +42,10 @@ router.get('/',(req,res)=>{
     userref.once("value", function(snapshot) {
         var d = snapshot.val();
         res.render('home/beranda',{
-            title:'Hai Tekno',
+            title: namaapplikasi,
             data : d,
             slide : false ,
+            na : namaapplikasi
            }) 
     });
    
@@ -81,7 +83,8 @@ router.get('/blog/:slug',(req,res)=>{
          data  : c,
          thumb : thumb,
          slide : false ,
-         view  : view
+         view  : view,
+         na : namaapplikasi
         }); 
     });
 })
@@ -153,6 +156,10 @@ router.get('/rajal',(req,res)=>{
         baseurl : siteurl
     });
 });
+router.get('/getfile',(req,res)=>{
+    
+    res.send(cfg);
+})
 router.get('/sitemap',(req,res)=>{
     var xml = builder.create('bookstore');
      

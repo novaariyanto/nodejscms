@@ -10,10 +10,10 @@
     Length: 784 pages">
     <meta name="google-site-verification" content="SuEsDDNieRFtNcn0_-b3pCJc2nhQ6DA35er_SReJZyg" />  
     <title>{{title}}</title>
-    <link rel="stylesheet" href="/css/materialize.css">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="shortcut icon" href="/logo.png">
-    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="stylesheet" href="/assets/css/materialize.css">
+    {{!-- <link rel="manifest" href="/assets/manifest.json"> --}}
+    <link rel="shortcut icon" href="/assets/logo.png">
+    <link rel="apple-touch-icon" href="/assets/logo.png">
     <meta name="theme-color" content="#00897B"/>
     <style>
         html {
@@ -22,12 +22,12 @@
     </style>
 </head>
 
-<script src="/db.js"></script>
+{{!-- <script src="/assets/db.js"></script> --}}
 <body onload="">
 
     <nav class="teal lighten-1" role="navigation">
         <div class="nav-wrapper container">
-            <a href="#" class="brand-logo" id="logo-container">Hai Tekno</a>
+            <a href="#" class="brand-logo" id="logo-container">{{na}}</a>
             <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
             <ul class="topnav right hide-on-med-and-down">
                 <li><a class="waves-effect" href="/">Home</a></li>
@@ -43,10 +43,10 @@
     </div>
    
 
-    <script src="/js/materialize.js"></script>
-    <script src="/js/materialize.min.js"></script>
-    <script src="/js/nav.js"></script>
-    <script>
+    <script src="/assets/js/materialize.js"></script>
+    <script src="/assets/js/materialize.min.js"></script>
+    <script src="/assets/js/nav.js"></script>
+    {{!-- <script>
     
         if("serviceWorker" in navigator){
             window.addEventListener("load",function(){
@@ -62,6 +62,6 @@
         }else{
             console.log("service worker belum didukung browser ini");
         }
-    </script>
+    </script> --}}
 </body>
 </html>
