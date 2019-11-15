@@ -63,7 +63,7 @@ router.post('/upload',(req,res)=>{
     // manangani upload file
     form.parse(req, function (err, fields, files) {
       var oldpath = files.filetoupload.path;
-      var newpath = __dirname + "/public/" + files.filetoupload.name;
+      var newpath = __dirname + "/uploads/" + files.filetoupload.name;
 
       // pindahakan file yang telah di-upload
       mv(oldpath, newpath, function (err) {

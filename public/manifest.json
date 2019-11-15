@@ -1,7 +1,7 @@
 {
-    "name": "Bajang CMS",
-    "short_name": "Bajang CMS",
-    "description": "Bajang CMS",
+    "name": "Jajanan Tekno",
+    "short_name": "Jajanan Tekno",
+    "description": "Jajanan Tekno",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#00897B",
@@ -15,16 +15,16 @@
     ],
     "firebasekey":[{
         "type": "service_account",
-        "project_id": "lapapa",
-        "private_key_id": "20781c29c6c476e0403e0b91211fb2d2ebc22e0e",
-        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCweyD3+owZ5+YD\n3RndZQVigKZRaE3VGosi9iIM7SXCnz6rZHYyEnKb6Cv2j9vdFPim2KkAxlAxFcIw\nN5tnsbv4cbd+WTLxoS/rgFxMubCW6PvLvVGicZYsOmxZtzactv9Yma5KPQ+8dZcV\nFUgTfxgpH3P5ptdPtyGa9zbAnlBUrJJRIYjUsH2nkZqydUEEvnaRzhVT2vUkLwCj\nk0zj9uFwFDMWF1KemZoBcHfZteDs3mhGh6SNHKBsytlRbL3szYzhXJwH40Ijarrq\nSqJrE8yZ+itnrkc54gJ/Wew4tk1Yls/gkUBfBYUzQrKT2LDFKTYqzQfUANmHPLln\nW3m/a5ABAgMBAAECggEAAsaAQEPnTKBO0vBi5xcWIy3HP0QEJQ+jN33HgiKrysPt\nmFg5Ls3a+8RaO0N+vToPYECfZmdW5sDr6ks92xLkllLsmlZixwY6xt5IOKBmIeUE\ncPzh3VRxjkFD/cfTCuf1s/5qT5YFfRdIU6E1iFBokwjZJZ6JSgfizowD+gnHvxRM\nJSVJkCM8y4D5ne4/f8amwlCb70Hvsj1mAcMAnil5VLvdIZC11E9mRt28WWK+TU4o\ndxlLSJLNe8J3gLxAKwv7aARS3qZ+sMyyJWYF8xj7gQ8oe+IiK5OaPZFxn9hrCLts\nWqV+DA0ff0p70qqcf0bA6fDa0a10J1LU4lXsEN+k5QKBgQDrdpw41TfCqd2Xigui\nZkR3NqV51iHHHAcFRoDCWz4MgZv3YaUmKmiS0OZNeVXsLrHFlXMsnDbrR9BtC6jk\n9etgyDpvehh+R7CAZN7wI+14vwQIYoVIHHs49RqbLxA/roXnGnuAqTUbA6HJVvyp\nnawpzlqE1Vdfq6/+WC3XnCDd8wKBgQC/35HJeQ8QN6JY0q0MTiryS1MdFCpyVBQn\nDFhCqItBNdhS0W018Fg64c6QUBqfZb8CQaPn/vCNzXtSQM6hEE0qU1KjLWV3rSYp\nUPggsaNu2bnxpk2mbXJceTRJ0pc25K7NG8pbyus9wlxYcWacujsPFWgSFAy1oNcV\nXsUOtRszOwKBgDedCSLnQUdKBZuAMGVIEE2z63uOVuYHOaVGVK0TDeG4TxUry+zq\nwU5D5tFPojqpgLVxKgXUU6hYiuLmiRqi9tgiEqM3zEcvOYHp0ToY0kLdot80HdS9\nXWFDiugyQn04BEpkV904meFqhzDdyclqAzrQkVKkbQGctHG3dARjzON/AoGAKkyv\nZys5Fuos8EgBvmS9Mw1IFXEMqoe+qZ0fGBLwIEAuoJNq8Ck8Sj7duxLty5Yytdyi\ntdKOVbSnK0r+QqPFXz9fSHoJlIinkRQ4n3yJ+zYkuBFhrP8T5y8RR/UVQRTJNI6b\n3gCuO79NfHIDnSmxO3IMr2+cHa6HvD5YUxW6GWECgYEAyPqT13gXpFDrPnV+p31P\nqwloCzBuz6B8XnFuroD1py/r3HxSHE37B8zJMbJFsQrae+Q8hsaIey21f0+bzq3L\ncI30MJUN+Q6EHa4fC8AEE7f5R3pyNPA0QCXuEMcE7AIqcgxYSdidkoPy2kOPFmCY\njZoqY3TKzmR4vflFk9xRlic=\n-----END PRIVATE KEY-----\n",
-        "client_email": "firebase-adminsdk-xh454@lapapa.iam.gserviceaccount.com",
-        "client_id": "102378720279228181945",
+        "project_id": "tokomedia",
+        "private_key_id": "3b39110a8374d6f599c7758706a1f8f408b6d645",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCcOAJVbp1btAnn\n7l/GJ/IvbOfC6EF9PcpgGd/eGqtlDT6oHDKFfJvHWj9qe3OYKrKG25HBYp3UhEMl\nntzv5HVmYDd5G8wAskJxBwMwHuSmNO3ybq3AkncKQ8/bi/vgxlOlPIOWFVEysyb6\n2eAbadY1898CF8rDKsENlf/VMiGN29WS3v7bllSQwWnP4d8bfsZ5m2Y8hd2/qV4V\nTrtBCY+Vocpsh0X9CG6OhnXevDxvQjAy8QKaoJ5Wkh1ZxMts76RH4GtxOuCZVnWy\nLFP++Ej6aZxTdAnpJZGs1v3Z86Xp/sMeucgCBDLTQ+G1IZ7LGsU+fTDcav5inX4C\n2WIDAeR/AgMBAAECggEAHslM8HA1s7JV9267Ui5iJKWGQRuLeHaacPj4bOl9mJMV\nI4U3EaZ+frmS4NXGcJkNiNUxstZP+2c7Ymkd6mrwFgZlOElZmVOIE4VJxAx6jCTH\nNe1I8bgLnKrDhmVedKwxJNG5rvSxhVfYGTyh1VU0wXo3m058B51f4WELw4S3JyD6\nRpFugw7B8YFetiKHDPc4EfltQtgpbxPkiI2OB/RudVB29oBvJWFE5hnUMhZPHiDE\n/6SAGt+RyD+/K12Gom1g+Cy1yXv7I7Hz0QcWNzQ8jPH2lXs1oVGaWopPUCMEkNWv\nkebFLhHSNVHMXvZ2YLdveeMAAlEzJLAFEtf5F9/HaQKBgQDVjoLFTFaBih7HvFm5\nHj8QdXHb7p0cDRQQ7FSHC6H4vH9cHfop7HafbJQ7HgL1GfBl6XhdwrngRHVshJUg\nwvjiNr0WIPbirTHZ2sQYLO1QN/oDGMsGt3wn40czvOwX05NciB5WEkjykvcv3ej/\nt7JkpoCrAqmuvmC9F3X7nYQGyQKBgQC7RDhJmuEFDyb0bFNpGpGkGBetPl725I5F\nyaVUAGTL00JRTyXbvSdp4Pzgoz1c2bJ+uwRHaz0FVNRYXmd0CauHakUopxOvb+b5\nhD1Tc5D6OQF4wNfyXYLtU9m+vz08kO3V7o6KNesIxNz/rt5edJCUqE9CJSuh694h\n1nJB1uGNBwKBgH9P7Enuzot/agYtFVg03efT/ELfJ653ZYUJPwMbPj5pMYwbGu4v\nWDCGrH/pzl2MTzKSUv2ifuliJpbBG55iXbmOZH9yu3w7QELeFpVLA1cVZ+i8uRyR\n+mRVLDd940n5ChrZ0ywAzpg+YTqaErOQMburP32zorDYMhfIir+sEe9xAoGBAKck\nRpD7maeoVH6ISRJgUmmBz3AjYSM/7/Q9/EAzccOytVhZKlMsSwdndo0RZe1/qJ8Q\nUMtl3brqcfTFndSl5OEiasPUC+/kEuXVr97SIS4Uv0mF5bg+2mL1Gj3z9rYeLQlq\nuPKHGVZkT1QuQe9QXtMwPj2ta3pESakt/CDjp8D1AoGBALPewjyoyxyHVl2QGWdJ\njCAN/p7lUIo3Zor2giAzPOZDCYmaCJg1my3SWQ/f6rlLH74Z1ygK0SO5Qw3NO/gV\n9m65w7aUtVv35azCus2efmRxI+LO9jzd0BjbzDSzBaOz785lqQkT55THdGIY+OR/\nzwXtkhrLw9JXhjXZ0DSJ+9eg\n-----END PRIVATE KEY-----\n",
+        "client_email": "firebase-adminsdk-7dyi9@tokomedia.iam.gserviceaccount.com",
+        "client_id": "105416261305380891010",
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
         "token_uri": "https://oauth2.googleapis.com/token",
         "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-xh454%40lapapa.iam.gserviceaccount.com"
-      }],
-      "databaseurl":"https://lapapa.firebaseio.com"
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-7dyi9%40tokomedia.iam.gserviceaccount.com"
+    }],
+      "databaseurl":"https://tokomedia.firebaseio.com"
       
 }
