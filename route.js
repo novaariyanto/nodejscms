@@ -192,7 +192,7 @@ router.get('/rajal',(req,res)=>{
 });
 
 router.get('/sitemap',(req,res)=>{
-    var ureff = db.child(tb_article).limitToFirst(5);
+    var ureff = db.child(tb_article);
     ureff.once("value", function(snapshot) {
         var d = snapshot.val();
         // res.send(d);
