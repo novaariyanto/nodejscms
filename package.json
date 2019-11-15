@@ -16,7 +16,9 @@
     "express-handlebars": "^3.1.0",
     "firebase-admin": "^8.0.0",
     "firebase-functions": "^3.1.0",
+    "formidable": "^1.2.1",
     "handlebars": "^4.4.3",
+    "mv": "^2.1.1",
     "nodemon": "^1.19.1",
     "request": "^2.88.0",
     "xmlbuilder": "^13.0.2"
