@@ -28,7 +28,7 @@ app.set('view engine','hbs');
 app.use('/assets',express.static(__dirname+'/public'));
 app.use('/',require(__dirname+'/route'));
 
-var port = 8000;
+var port = 6000;
 app.listen(port,()=>{
     console.log('Server is running at port '+port);
 });
